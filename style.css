@@ -1,0 +1,344 @@
+/* GLOBAL STYLES & RESET */
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --accent-color: #4CAF50; /* Example accent, the original is a teal/mint color */
+    --text-light: #f0f0f0;
+    --text-dark: #333;
+    --button-teal: #4cbbc4; /* Teal/mint color from the image */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background: linear-gradient(180deg, #c3f2f7 0%, #a2e0e9 40%, #ffffff 100%);
+}
+
+h1 { font-size: 4rem; font-weight: 700; }
+h2 { font-size: 2.5rem; font-weight: 600; margin-bottom: 20px; }
+h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 10px; }
+p { margin-bottom: 15px; }
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 15px;
+}
+
+.btn-buy {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-shop, .btn-shop-all-categories {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    border-radius: 30px;
+    padding: 10px 25px;
+    margin-right: 0; /* Clear margin for standalone use */
+}
+
+/* --- LAYOUTS --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* HERO SECTION */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 5%;
+    min-height: 70vh;
+    color: var(--secondary-color);
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+    z-index: 1; /* Ensure text is above background detail */
+}
+
+.logo {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.hero-section h1 {
+    font-size: 4.5rem;
+    line-height: 1;
+    margin: 20px 0 40px;
+}
+
+.hero-buttons {
+    display: flex;
+}
+
+.hero-image-container {
+    flex: 1;
+    text-align: right;
+    position: relative;
+}
+
+.hero-headset-img {
+    max-width: 100%;
+    height: auto;
+    transform: rotate(-10deg); /* Slight rotation to match image */
+}
+
+/* ALL-NEW TECHNOLOGY SECTION */
+.technology-section {
+    display: flex;
+    padding: 80px 5%;
+    background-color: var(--secondary-color);
+    gap: 50px;
+    align-items: center;
+}
+
+.technology-section .text-content {
+    flex: 1;
+    max-width: 45%;
+    color: var(--text-dark);
+}
+
+.feature-image-container {
+    flex: 1;
+    min-height: 400px;
+    background-color: #f7f7f7; /* Light gray background for the panel */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Audio Bars Simulation */
+.audio-detail {
+    display: flex;
+    align-items: flex-end;
+    height: 100px;
+}
+
+.bar {
+    width: 8px;
+    background-color: var(--text-dark);
+    margin-left: 5px;
+    border-radius: 2px;
+}
+
+.bar:nth-child(1) { height: 30px; }
+.bar:nth-child(2) { height: 50px; }
+.bar:nth-child(3) { height: 80px; }
+
+
+/* SHOP BY CATEGORY SECTION */
+.shop-by-category {
+    text-align: center;
+    padding: 80px 5%;
+}
+
+.category-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card {
+    width: 30%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.card-image-placeholder img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.btn-shop-all-categories {
+    border: 2px solid var(--button-teal);
+    color: var(--button-teal);
+}
+
+/* EXPERT SUPPORT SECTION */
+.expert-support-section {
+    display: flex;
+    padding: 80px 5%;
+    background-color: #f7f7f7;
+    gap: 50px;
+    align-items: center;
+}
+
+.expert-support-section .text-content {
+    flex: 1;
+    max-width: 45%;
+}
+
+.expert-support-section h2 {
+    color: var(--primary-color);
+}
+
+.visit-store {
+    font-weight: 700;
+    margin: 30px 0;
+    font-size: 1.1rem;
+}
+
+.location-details {
+    margin-top: 40px;
+    display: flex;
+    gap: 50px;
+}
+
+.location-details p {
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+
+.support-image-container {
+    flex: 1;
+    text-align: right;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.support-image-container img {
+    width: 100%;
+    display: block;
+}
+
+/* FOOTER SECTION */
+.site-footer {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: var(--secondary-color);
+}
+
+.site-footer h2 {
+    text-align: left;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.main-office, .social-media {
+    width: 30%;
+}
+
+.main-office h3 {
+    color: var(--primary-color);
+}
+
+.main-office address, .main-office a {
+    display: block;
+    font-style: normal;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.main-office a {
+    color: var(--button-teal);
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.social-media ul {
+    list-style: none;
+}
+
+.social-media li {
+    margin-bottom: 8px;
+}
+
+.social-media a {
+    color: var(--text-dark);
+}
+
+.social-media i {
+    width: 25px;
+    color: var(--button-teal);
+}
+
+/* Responsive adjustments (basic) */
+@media (max-width: 1024px) {
+    .hero-section, .technology-section, .expert-support-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero-content, .technology-section .text-content, .expert-support-section .text-content {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .hero-headset-img {
+        max-width: 70%;
+    }
+
+    .category-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-office, .social-media {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}

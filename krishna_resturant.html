@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRISHNA | Authentic Indian Cuisine</title>
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+        }
+        .hero-bg {
+            /* Placeholder background image for a vibrant, upscale look */
+            background-image: url('https://placehold.co/1920x1080/0f172a/f97316?text=The+Flavour+of+India');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+        }
+        .logo-text {
+            /* Custom styling for the logo text */
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo Section -->
+            <div class="flex items-center space-x-2">
+                <!-- Inline SVG Logo: Stylized Peacock Feather/Swirl for Krishna -->
+                <svg class="h-8 w-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+                <a href="#" class="logo-text text-slate-800">KRISHNA</a>
+            </div>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex space-x-6 text-lg">
+                <a href="#home" class="text-slate-600 hover:text-amber-600 transition duration-300 rounded-lg px-2 py-1">Home</a>
+                <a href="#menu" class="text-slate-600 hover:text-amber-600 transition duration-300 rounded-lg px-2 py-1">Menu</a>
+                <a href="#about" class="text-slate-600 hover:text-amber-600 transition duration-300 rounded-lg px-2 py-1">About Us</a>
+                <a href="#contact" class="text-slate-600 hover:text-amber-600 transition duration-300 rounded-lg px-2 py-1">Contact</a>
+            </div>
+            
+            <!-- Reservation Button -->
+            <a href="#contact" class="hidden md:inline-block bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 px-5 rounded-full shadow-md transition duration-300">
+                Reserve a Table
+            </a>
+
+            <!-- Mobile Menu Button (Hamburger) - JS not implemented for simplicity, but structure is here -->
+            <button class="md:hidden text-slate-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center p-4">
+        <div class="bg-black bg-opacity-50 p-8 sm:p-12 rounded-xl shadow-2xl max-w-4xl mx-auto">
+            <h1 class="text-5xl sm:text-7xl font-extrabold text-white mb-4 leading-tight">
+                Taste the <span class="text-amber-500">Authentic India</span>
+            </h1>
+            <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                Discover the rich, vibrant, and traditional flavors of India, prepared with love and the finest ingredients.
+            </p>
+            <a href="#menu" class="inline-block bg-amber-600 hover:bg-amber-700 text-white text-xl font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+                View Our Menu
+            </a>
+        </div>
+    </section>
+
+    <!-- Menu Section: Updated with Categorized Indian Dishes and Images -->
+    <section id="menu" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-slate-800 mb-2">Our Comprehensive Menu</h2>
+            <p class="text-xl text-slate-500 mb-12">Experience the full spectrum of Indian regional cuisine, prepared with passion and tradition.</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 text-left">
+                <!-- Column 1: Starters & Sides -->
+                <div>
+                    <!-- Section: Starters (Based on the 'ENTREES' structure from the uploaded image) -->
+                    <h3 class="text-3xl font-extrabold text-amber-600 border-b-4 border-amber-600 inline-block pb-1 mb-6">Starters</h3>
+                    <div class="space-y-6">
+                        <!-- Dish 1: Samosa -->
+                        <div class="border-b border-gray-200 pb-4 flex items-start space-x-4">
+                            <!-- Image Placeholder for Samosa -->
+                            <img src="https://indiansteakshouse.com/images/samosa.png" alt="Spiced Vegetable Samosa" class="w-16 h-16 object-cover rounded-md shadow-md flex-shrink-0">
+                            <div class="flex-grow">
+                                <p class="flex justify-between font-semibold text-xl text-slate-800">
+                                    <span>Spiced Vegetable Samosa (V)</span>
+                                    <!-- Price updated to Rupee -->
+                                    <span class="text-amber-600">₹90</span>
+                                </p>
+                                <p class="text-slate-600 text-sm">Crispy pastry filled with potato, peas, and house spices.</p>
+                            </div>
+                        </div>
+
+                        <!-- Dish 2: Onion Bhaji -->
+                        <div class="border-b border-gray-200 pb-4 flex items-start space-x-4">
+                            <!-- Image Placeholder for Onion Bhaji -->
+                            <img src="https://tse4.mm.bing.net/th/id/OIP.GoP6XAuPAXEAxoecZtIaNQHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Crispy Onion Bhaji" class="w-16 h-16 object-cover rounded-md shadow-md flex-shrink-0">
+                            <div class="flex-grow">
+                                <p class="flex justify-between font-semibold text-xl text-slate-800">
+                                    <span>Crispy Onion Bhaji (V, GF)</span>
+                                    <!-- Price updated to Rupee -->
+                                    <span class="text-amber-600">₹80</span>
+                                </p>
+                                <p class="text-slate-600 text-sm">Finely sliced onions battered in a light spiced chickpea flour.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Dish 3: Paneer Tikka -->
+                        <div class="border-b border-gray-200 pb-4 flex items-start space-x-4">
+                            <!-- Image Placeholder for Paneer Tikka -->
+                            <img src="https://img.freepik.com/premium-photo/juicy-tandoori-paneer-tikka-white-background-paneer-tikka-image-photography_1020697-118609.jpg?w=2000" alt="Tandoori Paneer Tikka" class="w-16 h-16 object-cover rounded-md shadow-md flex-shrink-0">
+                            <div class="flex-grow">
+                                <p class="flex justify-between font-semibold text-xl text-slate-800">
+                                    <span>Tandoori Paneer Tikka</span>
+                                    <!-- Price updated to Rupee -->
+                                    <span class="text-amber-600">₹180</span>
+                                </p>
+                                <p class="text-slate-600 text-sm">Marinated Indian cheese grilled in our clay oven, served with mint chutney.</p>
+                            </div>
+                        </div>
+
+                        <!-- Dish 4: Tandoori Wings -->
+                        <div class="pb-4 flex items-start space-x-4">
+                            <!-- Image Placeholder for Tandoori Wings -->
+                            <img src="https://th.bing.com/th/id/OIP.2siKG1Id_k7oRuK9YnHxbgHaLH?w=182&h=334&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Tandoori Chicken Wings" class="w-16 h-16 object-cover rounded-md shadow-md flex-shrink-0">
+                            <div class="flex-grow">
+                                <p class="flex justify-between font-semibold text-xl text-slate-800">
+                                    <span>Tandoori Chicken Wings</span>
+                                    <!-- Price updated to Rupee -->
+                                    <span class="text-amber-600">₹170</span>
+                                </p>
+                                <p class="text-slate-600 text-sm">Chicken wings marinated in yogurt and spices, charred to perfection.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Sides & Breads (Based on the 'SIDES' structure) -->
+                    <h3 class="text-3xl font-extrabold text-amber-600 border-b-4 border-amber-600 inline-block pb-1 mt-12 mb-6">Breads & Rice</h3>
+                    <div class="space-y-6">
+                        <!-- Dish 5: Garlic Naan -->
+                        <div class="border-b border-gray-200 pb-4 flex items-start space-x-4">
+                            <!-- Image Placeholder for Garlic Naan -->
+                            <img src="https://sultancottage.uk/wp-content/uploads/2020/11/garlic-coriander-naan.jpg" alt="Garlic Naan" class="w-16 h-16 object-cover rounded-md shadow-md flex-shrink-0">
+                            <div class="flex-grow">
+                                <p class="flex justify-between font-semibold text-xl text-slate-800">
+                                    <span>Garlic and Coriander Naan</span>
+                                    <!-- Price updated to Rupee -->
+                                    <span class="text-amber-600">₹75</span>
+                                </p>
+                                <p class="text-slate-600 text-sm">Freshly baked bread with minced garlic and cilantro.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Dish 6: Basmati Rice -->
+                        <div class="pb-4 flex items-start space-x-4">
+                            <!-- Image Placeholder for Basmati Rice -->
+                            <img src="https://tse2.mm.bing.net/th/id/OIP.ptrM-zGkbartiyZGtPWv1gHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Basmati Rice" class="w-16 h-16 object-cover rounded-md shadow-md flex-shrink-0">
+                            <div class="flex-grow">
+                                <p class="flex justify-between font-semibold text-xl text-slate-800">
+                                    <span>Steamed Basmati Rice (GF)</span>
+                                    <!-- Price updated to Rupee -->
+                                    <span class="text-amber-600">₹60</span>
+                                </p>
+                                <p class="text-slate-600 text-sm">Fragrant, fluffy long-grain rice.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Mains & Desserts -->
+                <div>
+                    <!-- Section: Mains (Based on the 'ORDERS' structure) -->
+                    <h3 class="text-3xl font-extrabold text-amber-600 border-b-4 border-amber-600 inline-block pb-1 mb-6">Main Courses</h3>
+                    <div class="space-y-6">
+                        <!-- Dish 7: Butter Chicken -->
+                        <div class="border-b border-gray-200 pb-4 flex items-start space-x-4">
+                            <!-- Image Placeholder for Butter Chicken -->
+                            <img src="https://www.billyparisi.com/wp-content/uploads/2022/08/chicken-makhani-featured.jpg" alt="Butter Chicken" class="w-16 h-16 object-cover rounded-md shadow-md flex-shrink-0">
+                            <div class="flex-grow">
+                                <p class="flex justify-between font-semibold text-xl text-slate-800">
+                                    <span>Makhani (Butter Chicken)</span>
+                                    <!-- Price updated to Rupee -->
+                                    <span class="text-amber-600">₹650</span>
+                                </p>
+                                <p class="text-slate-600 text-sm">Tender chicken tikka in a rich, creamy tomato gravy. Our signature dish.</p>
+                            </div>
+                        </div>
+
+                        <!-- Dish 8: Lamb Rogan Josh -->
+                        <div class="border-b border-gray-200 pb-4 flex items-start space-x-4">
+                            <!-- Image Placeholder for Lamb Rogan Josh -->
+                            <img src="https://media.chefdehome.com/350/240/1/lamb-rogan-josh/indian-kashmiri-mutton-lamb-rogan-josh-curry-slow-cooker-chefdehome-3.jpg" alt="Lamb Rogan Josh" class="w-16 h-16 object-cover rounded-md shadow-md flex-shrink-0">
+                            <div class="flex-grow">
+                                <p class="flex justify-between font-semibold text-xl text-slate-800">
+                                    <span>Kashmiri Lamb Rogan Josh</span>
+                                    <!-- Price updated to Rupee -->
+                                    <span class="text-amber-600">₹725</span>
+                                </p>
+                                <p class="text-slate-600 text-sm">Slow-cooked lamb in a spicy, aromatic red sauce.</p>
+                            </div>
+                        </div>
+
+                        <!-- Dish 9: Dal Makhani -->
+                        <div class="border-b border-gray-200 pb-4 flex items-start space-x-4">
+                            <!-- Image Placeholder for Dal Makhani -->
+                            <img src="https://th.bing.com/th/id/OIP.v2Mb4OOSwcOq9XsUJlwzfAHaHa?w=199&h=199&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Dal Makhani" class="w-16 h-16 object-cover rounded-md shadow-md flex-shrink-0">
+                            <div class="flex-grow">
+                                <p class="flex justify-between font-semibold text-xl text-slate-800">
+                                    <span>Classic Dal Makhani (V)</span>
+                                    <!-- Price updated to Rupee -->
+                                    <span class="text-amber-600">₹490</span>
+                                </p>
+                                <p class="text-slate-600 text-sm">Black lentils and kidney beans simmered overnight in cream and spices.</p>
+                            </div>
+                        </div>
+
+                        <!-- Dish 10: Palak Paneer -->
+                        <div class="pb-4 flex items-start space-x-4">
+                            <!-- Image Placeholder for Palak Paneer -->
+                            <img src="https://tse4.mm.bing.net/th/id/OIP.oaMXrqYHfryYyehFkgRRKQHaHa?cb=ucfimg2&ucfimg=1&w=1024&h=1024&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Palak Paneer" class="w-16 h-16 object-cover rounded-md shadow-md flex-shrink-0">
+                            <div class="flex-grow">
+                                <p class="flex justify-between font-semibold text-xl text-slate-800">
+                                    <span>Palak Paneer (V, GF)</span>
+                                    <!-- Price updated to Rupee -->
+                                    <span class="text-amber-600">₹580</span>
+                                </p>
+                                <p class="text-slate-600 text-sm">Fresh spinach puree cooked with cubes of house-made paneer cheese.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Dessert (Based on the 'DESSERT' structure) -->
+                    <h3 class="text-3xl font-extrabold text-amber-600 border-b-4 border-amber-600 inline-block pb-1 mt-12 mb-6">Desserts</h3>
+                    <div class="space-y-6">
+                        <!-- Dish 11: Gulab Jamun -->
+                        <div class="border-b border-gray-200 pb-4 flex items-start space-x-4">
+                            <!-- Image Placeholder for Gulab Jamun -->
+                            <img src="https://tse1.explicit.bing.net/th/id/OIP.vsFKqsds-PlitrQTgcMLRAHaHd?cb=ucfimg2&ucfimg=1&w=796&h=802&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Gulab Jamun" class="w-16 h-16 object-cover rounded-md shadow-md flex-shrink-0">
+                            <div class="flex-grow">
+                                <p class="flex justify-between font-semibold text-xl text-slate-800">
+                                    <span>Gulab Jamun</span>
+                                    <!-- Price updated to Rupee -->
+                                    <span class="text-amber-600">₹120</span>
+                                </p>
+                                <p class="text-slate-600 text-sm">Deep-fried milk solids soaked in cardamom and rose-flavored syrup.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Dish 12: Mango Kulfi -->
+                        <div class="pb-4 flex items-start space-x-4">
+                            <!-- Image Placeholder for Mango Kulfi -->
+                            <img src="https://tse1.mm.bing.net/th/id/OIP.2TGUeS54TOBHDoTBfBDbHwHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Mango Kulfi" class="w-16 h-16 object-cover rounded-md shadow-md flex-shrink-0">
+                            <div class="flex-grow">
+                                <p class="flex justify-between font-semibold text-xl text-slate-800">
+                                    <span>Pistachio & Mango Kulfi (GF)</span>
+                                    <!-- Price updated to Rupee -->
+                                    <span class="text-amber-600">₹130</span>
+                                </p>
+                                <p class="text-slate-600 text-sm">Traditional Indian frozen dessert made with condensed milk and fruit puree.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="lg:order-2">
+                <img src="https://thearchitectsdiary.com/wp-content/uploads/2020/04/design-cloud-11-1024x683.jpeg" alt="Restaurant Interior" class="rounded-xl shadow-2xl w-full">
+            </div>
+            <div class="lg:order-1 text-center lg:text-left">
+                <h2 class="text-4xl font-bold text-slate-800 mb-4">Our Story: Passion and Tradition</h2>
+                <p class="text-lg text-slate-600 mb-6">
+                    Krishna Restaurant was founded on a simple principle: to bring the true, uncompromised flavors of Indian home cooking to the heart of the city. Our recipes have been passed down through generations, honoring traditional techniques while utilizing the freshest, locally sourced ingredients.
+                </p>
+                <p class="text-lg text-slate-600 mb-6">
+                    We believe dining is an experience. From the warm, ambient atmosphere to the carefully crafted presentation of every plate, we invite you to embark on a culinary journey that celebrates the richness of Indian culture.
+                </p>
+                <a href="#contact" class="inline-block bg-slate-800 hover:bg-slate-900 text-white font-semibold py-3 px-6 rounded-full transition duration-300 shadow-md">
+                    Meet Our Chefs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Reservation Form (Simplified) -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-slate-800 text-center mb-10">Visit Us or Make a Reservation</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Contact Details -->
+                <div class="md:w-1/2 bg-gray-100 p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-slate-800 mb-4">Contact Information</h3>
+                    <!-- Updated Address for India -->
+                    <p class="mb-3 text-slate-600 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        10, Spice Market, New Delhi, India 110001
+                    </p>
+                    <!-- Updated Phone Number for India -->
+                    <p class="mb-3 text-slate-600 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        +91 11 2345 6789
+                    </p>
+                    <p class="mb-3 text-slate-600 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        contact@krishnarestaurant.com
+                    </p>
+                </div>
+
+                <!-- Reservation Form (Updated to use JS for message box) -->
+                <div class="md:w-1/2 bg-amber-50 p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-slate-800 mb-4">Book a Table</h3>
+
+                    <!-- Success Message Display -->
+                    <div id="reservationSuccessMessage" class="hidden p-6 bg-green-100 border-l-4 border-green-500 text-green-700 rounded-lg" role="alert">
+                        <p class="font-bold">Reservation Confirmed!</p>
+                        <p>Thank you, your booking request has been submitted successfully. We will contact you shortly to finalize the details.</p>
+                        <button onclick="document.getElementById('reservationForm').classList.remove('hidden'); this.parentElement.classList.add('hidden');" class="mt-4 text-sm font-semibold text-green-600 hover:text-green-800 focus:outline-none">Book another table</button>
+                    </div>
+
+                    <form id="reservationForm" onsubmit="handleReservationSubmit(event)">
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium text-slate-700">Name</label>
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2">
+                        </div>
+                        <div class="mb-4">
+                            <label for="date" class="block text-sm font-medium text-slate-700">Date & Time</label>
+                            <input type="datetime-local" id="date" name="date" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2">
+                        </div>
+                        <div class="mb-6">
+                            <label for="guests" class="block text-sm font-medium text-slate-700">Number of Guests</label>
+                            <input type="number" id="guests" name="guests" min="1" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2">
+                        </div>
+                        <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300">
+                            Confirm Booking
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center items-center mb-4">
+                <p class="logo-text text-amber-500">KRISHNA</p>
+            </div>
+            <p class="text-sm mb-4">The art of fine Indian dining, perfected.</p>
+            
+            <!-- Social Media Icons (Placeholder Links) -->
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 4.01c-.722.322-1.488.536-2.298.63.834-.498 1.472-1.284 1.776-2.238-.78.46-1.644.79-2.56.974-.738-.79-1.79-1.288-2.954-1.288-2.238 0-4.053 1.815-4.053 4.054 0 .317.035.626.103.92-.12-.02-.238-.04-.36-.04-3.374 0-6.38 1.785-8.42 4.417-.358.618-.567 1.33-.567 2.083 0 1.403.714 2.64 1.79 3.364-.664-.02-1.288-.204-1.834-.508v.05c0 1.968 1.402 3.606 3.257 3.985-.34.093-.7.142-1.07.142-.26 0-.51-.026-.754-.075.52 1.614 2.02 2.79 3.79 2.822-1.39.9-3.146 1.44-5.05 1.44-.326 0-.646-.018-.96-.056 1.802 1.156 3.93 1.832 6.22 1.832 7.464 0 11.536-6.177 11.536-11.537 0-.177-.004-.354-.012-.529.794-.572 1.48-1.286 2.022-2.085z"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.616 9.157 8.358 9.876V14.65h-2.203V12h2.203V9.58c0-2.185 1.332-3.376 3.27-3.376.936 0 1.74.067 1.975.096v2.246h-1.328c-1.042 0-1.24.496-1.24 1.22V12h2.478l-.32 2.65h-2.158v7.226C18.384 21.157 22 16.991 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.477 2 5.044 3.725 3 6.452v11.096C5.044 20.275 8.477 22 12 22s6.956-1.725 9-4.452V6.452C17.956 3.725 14.523 2 11 2zm6.2 4.4a.6.6 0 100-1.2.6.6 0 000 1.2zM12 8c2.209 0 4 1.791 4 4s-1.791 4-4 4-4-1.791-4-4 1.791-4 4-4zm0 2c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2z"/></svg>
+                </a>
+            </div>
+
+            <p class="text-sm text-gray-500">&copy; 2024 Krishna Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to handle the form submission and show a custom message
+        function handleReservationSubmit(event) {
+            event.preventDefault(); // Stop the form from submitting normally
+            
+            // Simple client-side validation
+            const name = document.getElementById('name').value;
+            const date = document.getElementById('date').value;
+            const guests = document.getElementById('guests').value;
+
+            if (!name || !date || !guests) return; 
+
+            const successDiv = document.getElementById('reservationSuccessMessage');
+            const form = document.getElementById('reservationForm');
+
+            // Hide the form and show the success message
+            form.classList.add('hidden');
+            successDiv.classList.remove('hidden');
+            
+            // Clear the form fields (optional)
+            setTimeout(() => {
+                form.reset();
+            }, 500);
+            
+            // In a real application, you would send the data to a server here.
+            // For this demonstration, we just show the success message.
+        }
+    </script>
+</body>
+</html>
